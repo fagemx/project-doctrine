@@ -26,7 +26,7 @@ For each question, the apprenticeship-check file should include:
 
 ## Sample good answer (generic example)
 
-Drawn from the Decision Spirit doctrine; adapt to your project:
+Drawn from the Acme SaaS example doctrine in `examples/software-project/`; adapt to your project:
 
 > **Q1:** Citation-in-response shipped 2026-04-15. Trust-hardening phase. No new AI features until citation coverage ≥95%.
 >

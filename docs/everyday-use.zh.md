@@ -68,7 +68,7 @@
 ### 2. 開始新功能前
 
 **開發者講：**
-- 「我要做 handbook 的下一步，先用 doctrine 幫我判斷方向。」
+- 「我要做下一個功能，先用 doctrine 幫我判斷方向。」
 - 「這種 feature 要怎麼切才符合我們的做法？」
 
 **代理做：** 讀 L1（心法）、L3（方法）、L5（思考模式）、failure-memory、taste-examples。然後回答：
@@ -167,7 +167,7 @@
 **開發者講：**
 - 「用 project-doctrine-builder 幫我的 trading agent 建一套。」
 
-**代理做：** **不要**複製 Decision Spirit 的 doctrine。用 `skills/project-doctrine-builder/` 這個 skill：
+**代理做：** **不要**搬移任何其他專案的 doctrine。用 `skills/project-doctrine-builder/` 這個 skill：
 - 問這個新專案的 domain core 是什麼
 - 找出它最怕變成的錯版本
 - 蒐集既有 failure memory

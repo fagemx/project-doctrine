@@ -75,19 +75,19 @@ They're listed in increasing time scale.
 Example:
 
 ```markdown
-# Narrative Log: Surface Renderer Producer/Consumer Split
+# Narrative Log: Renderer Producer/Consumer Split
 
-At first, Plan C tried to let the assistant emit interactive surface
-instructions directly in the reply. It looked attractive because
-buttons felt conversational.
+At first, an earlier plan tried to let the assistant emit interactive
+surface instructions directly in the reply. It looked attractive
+because buttons felt conversational.
 
 But it blurred a trust boundary: generated text would become UI
 behavior.
 
 The split became clear later:
-- Stage 2 produces semantic visual blocks
-- Runtime renders lifecycle buttons deterministically
-- Telegram adapter only consumes trusted view models
+- The second-stage LLM produces semantic blocks
+- Runtime code renders interactive elements deterministically
+- Channel adapters only consume trusted view models
 
 Doctrine candidate:
 LLMs produce semantic material. Runtime owns trusted action surfaces.

@@ -449,7 +449,6 @@ Project Doctrine 支援三種模式。六層結構一樣；**判斷從哪裡來*
 - [`trading-agent/`](examples/trading-agent/) — 量化 / 交易代理專案大綱
 - [`ai-short-drama-factory/`](examples/ai-short-drama-factory/) — AI 內容 pipeline 大綱
 - [`research-agent/`](examples/research-agent/) — 長跑研究代理大綱
-- [`decision-spirit-redacted/`](examples/decision-spirit-redacted/) — 這個方法論原始抽取來源（指標）
 
 ---
 

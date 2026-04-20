@@ -95,7 +95,7 @@ Layers 1, 3, 5, 6 are *stable*. Layer 2 is *moderately stable*. Layer 4 grows si
 
 **Examples:**
 - "TDD per task: write failing test → verify it fails → implement minimum → verify pass → commit. Proven on the v0.1 adapter fix where the trailing-row bug was caught by the test before it shipped."
-- "Round-2 review before execution. Plan writer produces v1; reviewer surfaces blockers; plan patches in place; only then execute. Used on P-A, P-B, P-C, v0, v0.1 — every one caught ≥3 blockers."
+- "Round-2 review before execution. Plan writer produces v1; reviewer surfaces blockers; plan patches in place; only then execute. Used across our last 5 sequential plans — every one caught ≥3 blockers."
 - "Scope-fence check before every PR: `git diff main -- <forbidden-paths>` must be empty."
 
 **Anti-examples:**
@@ -175,7 +175,7 @@ Layers 1, 3, 5, 6 are *stable*. Layer 2 is *moderately stable*. Layer 4 grows si
 - It triggers the right question, not the answer
 
 **Examples:**
-- "**Framing > model capacity.** Scar: spent a week tuning Stage 2 prompts before realizing the framing itself was wrong."
+- "**Framing > model capacity.** Scar: spent a week tuning the main LLM prompts before realizing the framing itself was wrong."
 - "**減法比加法難.** Subtracting rules is harder than adding them — prompts are zero-sum, every addition dilutes something."
 - "**Hard ban is discipline, not reminder.** A 'never do X' rule requires treating X as inadmissible, not as something to remember to skip."
 

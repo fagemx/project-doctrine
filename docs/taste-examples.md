@@ -28,18 +28,18 @@ Each entry has three parts:
 
 ### TE-1: Confirmation after a user action
 
-**Situation:** User just confirmed a handbook page in a chat conversation. We reply to acknowledge.
+**Situation:** User just saved a draft via an inline button. The agent replies to acknowledge.
 
 **Good:**
-> 手帳頁收好了。
-> [archive button] [settle button]
+> Draft saved.
+> [Edit] [Discard]
 
 **Bad:**
-> ✨ I've successfully saved your handbook page! Would you like me to set a reminder or share it with others? Let me know what you'd like to do next.
+> ✨ I've successfully saved your draft! Would you like me to set a reminder or share it with collaborators? Let me know what you'd like to do next.
 
 **Why good wins:**
-- Our product is a co-presence creature, not an assistant. "Successfully" is corporate. Emoji prefix is performative.
-- The good version names the completed thing ("手帳頁收好了") and offers the two next lifecycle actions as buttons — user agency through clickable state, not question-mark prompting.
+- Our product is a quiet editor, not a chatty assistant. "Successfully" is corporate. Emoji prefix is performative.
+- The good version names the completed thing ("Draft saved.") and offers the two next lifecycle actions as buttons — user agency through clickable state, not question-mark prompting.
 - The bad version is conversationally busy. It turns a quiet completion into a menu.
 
 ---
@@ -48,17 +48,17 @@ Each entry has three parts:
 
 ### TE-2: Where new surface-level features live
 
-**Situation:** We want to add a new Telegram callback for "mark as read."
+**Situation:** We want to add a new callback for "mark as read."
 
 **Good:**
-- Add `markReadHandbookPage` helper to `src/spirit/handbook-store.ts` (mirror existing lifecycle helpers' shape: `readHandbookPage` → check state → mutate → `atomicWriteFileSync` → return page)
-- Add `handbook_mark_read:` callback handler in `src/telegram/bot-callbacks.ts`, wrapped in `acquireUserLock` + try/finally, mirroring the archive/settle pattern
+- Add `markItemRead` helper in `src/data/items-store.ts` (mirror existing lifecycle helpers' shape: read → state check → mutate → atomic write → return)
+- Add `item_mark_read:` callback handler in the channel adapter, wrapped in `acquireUserLock` + try/finally, mirroring the archive/settle pattern
 - No change to LLM prompts, no change to renderer view-model types
 
 **Bad:**
 - Add a `markRead` flag to the LLM prompt so the model knows to emit a "mark read" intent
-- Parse that intent from `SpiritResponse` in `spirit-pipeline.ts` and route to the handler
-- Add a `mark_read` section to `creature-prompt.ts`
+- Parse that intent from `AgentResponse` in the main pipeline and route to the handler
+- Add a `mark_read` section to the agent prompt
 
 **Why good wins:**
 - Producer/consumer split (L1 ideology): LLM owns semantics, runtime owns dispatch. Adding dispatch-critical flags to the prompt blurs the line.

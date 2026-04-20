@@ -122,17 +122,17 @@ Direct, specific, first-person-honest.
 
 Solo taste examples often preserve the aesthetic the project is reaching for — the thing a style guide can't capture because it's not about style.
 
-> **TE-1: What a reply should feel like**
+> **TE-1: What an acknowledgment should feel like**
 >
-> **Situation:** User says "it's fine, not urgent." Agent responds.
+> **Situation:** User says "it's fine, not urgent." The agent acknowledges.
 >
 > **Good:**
-> "好。"
+> "OK."
 >
 > **Bad:**
 > "Understood — I'll keep this in mind for when it becomes relevant. Let me know if the timing changes."
 >
-> **Why good wins:** The project is a co-presence creature, not an assistant. A short "好" acknowledges presence without performing helpfulness. The bad version is fluent and technically kind, but it breaks the stance.
+> **Why good wins:** The project values low-friction acknowledgment over performative helpfulness. The bad version is fluent and technically kind, but it triples the length without adding anything. Short acknowledgment matches the project's stance against over-explaining.
 
 This kind of taste call is hard to write as team doctrine (too dependent on the author's ear). Solo mode can capture it directly.
 

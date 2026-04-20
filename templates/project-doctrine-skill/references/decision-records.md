@@ -45,17 +45,17 @@ Do NOT write a DR for:
 ## Example
 
 ```markdown
-## DR-12: Surface Renderer Is Consumer-Only
+## DR-12: Renderer Is Consumer-Only
 
 - **Date:** 2026-04-19
-- **Decision:** The Surface Renderer is a deterministic view-model consumer. LLMs produce semantic blocks; the renderer does not parse LLM text for dispatch tokens.
-- **Rejected alternative:** Plan C v0.2 — SpiritResponse emits `surfaceButtons`; renderer parses buttons from the response text via fence markers.
+- **Decision:** The renderer is a deterministic view-model consumer. LLMs produce semantic blocks; the renderer does not parse LLM text for dispatch tokens.
+- **Rejected alternative:** An earlier proposal — the agent-response type emits dispatch-token fields; renderer parses buttons from the response text via fence markers.
 - **Why:** The rejected approach blurred the trust boundary. Every LLM prompt regression became a UI regression. Callback data parsing was unreliable (~5% error rate on quoting). We concluded that producer/consumer separation is architecturally safer than any amount of prompt tuning.
 - **Doctrine impact:**
   - Added L1.2 (producer/consumer split)
   - Added FM-1 (LLM-generated UI actions)
-  - Plan C v0.2 moved to `docs/superpowers/plans/superseded/`
-- **Evidence:** Plan C v0.2 SUPERSEDED doc, commit `abc1234` (revert), retro at `docs/retrospectives/2026-02-surface-renderer-decision.md`
+  - The rejected proposal moved to `docs/plans/superseded/`
+- **Evidence:** The superseded proposal doc, commit `abc1234` (revert), retro at `docs/retrospectives/2026-02-renderer-decision.md`
 ```
 
 ---

@@ -43,17 +43,19 @@ If the agent answers all six coherently and project-specifically, they have ente
 
 ## Sample agent response (good)
 
-> **Q1 (current):** We just merged PR #230 (store idempotency guards). The v0.1 Surface Renderer shipped in PR #229 with 5 interactive acceptance boxes still unchecked (Telegram smoke pending). Next prioritized item is manual smoke, then /handbook list clickability or Host persona extraction.
+Example uses the Acme SaaS context from `examples/software-project/`:
+
+> **Q1 (current):** We just merged PR #134 (store idempotency guards for archive/settle). The citation-in-response feature shipped in PR #128 with 5 interactive acceptance boxes still unchecked (manual vendor smoke pending). Next prioritized item is the smoke run, then list-view clickability or a persona-extraction follow-up.
 >
 > **Q2 (durable):** (L1) Producer/consumer split — LLM proposes structure, deterministic code owns dispatch. (L1) Data-layer hardness before UX expansion.
 >
-> **Q3 (stale):** The old "shared artifact pending" frame appears in older plan docs (pre-2026-04-12). It's been replaced by the room-mecha-three-books model. SKILL.md references it as "stale" but some task plans from March still assume it.
+> **Q3 (stale):** The old "central memory layer pending" frame appears in older plan docs. It's been replaced by the current trust-envelope framing. SKILL.md references the old one as "stale" but some task plans from last quarter still assume it.
 >
-> **Q4 (refuse):** Adding a `surfaceButtons` field to `SpiritResponse` (SUPERSEDED Plan C v0.2). If any new plan proposes model-emitted UI actions, refuse.
+> **Q4 (refuse):** Adding a dispatch-token field to the agent response type (see the SUPERSEDED renderer proposal). If any new plan proposes model-emitted UI actions, refuse.
 >
 > **Q5 (which layer — for "always lowercase commit messages"):** L4 SOP. Not L1 (not an identity claim), not L3 (not a method that's been tested for impact), not L6 (no scar). It's a procedural convention.
 >
-> **Q6 (smallest safe next move):** Either (a) run the manual Telegram smoke to close v0.1's interactive boxes, or (b) if the user wants forward motion on /handbook list clickability, scaffold a minimal read-only `handbook_open:` callback without lifecycle buttons yet. (a) is safer because it validates what's shipped before widening the surface.
+> **Q6 (smallest safe next move):** Either (a) run the manual vendor smoke to close v0.1's interactive boxes, or (b) if the user wants forward motion on list clickability, scaffold a minimal read-only open callback without lifecycle buttons yet. (a) is safer because it validates what's shipped before widening the surface.
 
 ## Sample agent response (bad)
 

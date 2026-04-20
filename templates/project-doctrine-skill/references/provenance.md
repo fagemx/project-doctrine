@@ -34,17 +34,17 @@ Not every entry needs a provenance note — but load-bearing L1, L6, and failure
 > **L6.1 — Framing > model capacity**
 >
 > **Originated:** 2026-03-18
-> **By:** Session reflection after Stage 2 prompt tuning week
-> **Context:** Spent 6 days attempting to improve Stage 2 output by adjusting prompt wording, adding few-shot examples, and trying larger models. Quality plateaued. Reframing the task (what Stage 2 was being asked to produce) solved it in one iteration.
+> **By:** Session reflection after a prompt-tuning week
+> **Context:** Spent 6 days attempting to improve main-model output by adjusting prompt wording, adding few-shot examples, and trying larger models. Quality plateaued. Reframing the task (what the model was being asked to produce) solved it in one iteration.
 > **Evidence:** `docs/retrospectives/2026-03-stage-2-framing-retro.md`, commit `abc1234`
 > **Status:** active
 
 > **FM-1: LLM-generated UI actions**
 >
 > **Originated:** 2026-02-25
-> **By:** Plan C v0.2 SUPERSEDE decision
-> **Context:** v0.2 allowed the creature prompt to emit button syntax. It shipped, then regressed: prompt changes broke the UI, button labels hallucinated, callback parsing inconsistent.
-> **Evidence:** `docs/superpowers/plans/superseded/2026-02-v0_2-button-syntax-SUPERSEDED.md`, revert commit `def5678`
+> **By:** A superseded proposal's SUPERSEDE decision
+> **Context:** v0.2 allowed the main agent prompt to emit button syntax. It shipped, then regressed: prompt changes broke the UI, button labels hallucinated, callback parsing inconsistent.
+> **Evidence:** `docs/plans/superseded/2026-02-v0_2-button-syntax-SUPERSEDED.md`, revert commit `def5678`
 > **Status:** active
 
 ---

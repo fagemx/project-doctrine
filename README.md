@@ -444,7 +444,6 @@ See [`examples/`](examples/):
 - [`trading-agent/`](examples/trading-agent/) — outline for a quant / trading-agent project
 - [`ai-short-drama-factory/`](examples/ai-short-drama-factory/) — outline for an AI-content pipeline
 - [`research-agent/`](examples/research-agent/) — outline for a long-running research agent
-- [`decision-spirit-redacted/`](examples/decision-spirit-redacted/) — pointer to the real-world project this methodology was extracted from
 
 ---
 

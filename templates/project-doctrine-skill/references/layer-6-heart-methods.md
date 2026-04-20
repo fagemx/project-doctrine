@@ -28,7 +28,7 @@ Heart methods are the last line of defense when deliberation fails. They fire as
 
 > **6.1 — Framing > model capacity**
 >
-> **Scar:** Spent a week tuning Stage 2 prompts trying to improve LLM output quality before realizing the framing (what we were asking the model to produce) was wrong. No amount of prompt tuning fixes a wrong frame.
+> **Scar:** Spent a week tuning the main LLM prompts trying to improve output quality before realizing the framing (what we were asking the model to produce) was wrong. No amount of prompt tuning fixes a wrong frame.
 >
 > **Triggers when:** Output quality is disappointing and the impulse is to try a bigger model / more examples / more explicit instructions. First ask: is the frame right?
 
@@ -46,15 +46,15 @@ Heart methods are the last line of defense when deliberation fails. They fire as
 
 > **6.4 — Data-layer hardness before UX expansion**
 >
-> **Scar:** Shipped UX (v0.1) before hardening the store layer (idempotency). Stale-button double-click exposed a duplicate-event bug. Would have been painful at 10x the entry points. Fixed store first before widening UX.
+> **Scar:** Shipped UX (feature v0.1) before hardening the store layer (idempotency). Stale-button double-click exposed a duplicate-event bug. Would have been painful at 10x the entry points. Fixed store first before widening UX.
 >
 > **Triggers when:** A UX expansion plan lands while a store/data-layer gap is known. Close the gap first.
 
-> **6.5 — Shared artifact is the paper on the table**
+> **6.5 — One source of truth beats three out-of-sync ones**
 >
-> **Scar:** Tried to track decisions in agent memory, in prompts, and in architecture docs simultaneously. Each drifted. The one that survived was the explicit shared artifact — the thing both human and agent look at the same copy of.
+> **Scar:** Tried to track important project decisions in agent memory, in prompts, and in architecture docs simultaneously. Each drifted. The one that survived was the single canonical document — the copy everyone, human or agent, reads before acting.
 >
-> **Triggers when:** Decision-state is sprawling across memory, logs, and prose. Pick one source of truth and make it the paper on the table.
+> **Triggers when:** Decision-state is sprawling across memory, logs, and prose. Pick one canonical document and make everyone (human and agent) read the same copy.
 
 ---
 

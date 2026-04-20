@@ -76,7 +76,7 @@ Short-term record → long-term doctrine.
 
 A handoff line like:
 
-> "Plan C got superseded because it mixed producer and consumer."
+> "The renderer plan got superseded because it mixed producer and consumer."
 
 If this failure pattern keeps recurring, it deserves promotion to:
 
@@ -338,7 +338,7 @@ Promotion is the most valuable maintenance action. You're compressing observatio
 **Example promotion:**
 
 Event:
-> "Surface Renderer v0.1 shouldn't let LLMs generate buttons."
+> "The renderer feature v0.1 shouldn't let LLMs generate buttons."
 
 Promoted:
 > "LLM produces semantic material; deterministic runtime produces trusted UI actions."

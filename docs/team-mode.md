@@ -98,7 +98,7 @@ Example commit messages:
 
 ```
 docs(doctrine): add failure memory for generated callback actions
-docs(doctrine): update product thesis after surface renderer v0.1
+docs(doctrine): update product thesis after renderer v0.1
 docs(doctrine): mark old agent workflow as superseded
 docs(doctrine): add taste example for confirmation-reply copy
 ```
@@ -136,16 +136,16 @@ A team doctrine benefits from lightweight decision records for entries that had 
 Format (minimal ADR-style):
 
 ```markdown
-## DR-12: Surface Renderer Is Consumer-Only
+## DR-12: Renderer Is Consumer-Only
 
 - **Date:** 2026-04-19
-- **Decision:** Surface Renderer is a deterministic view-model consumer. LLM produces semantic blocks; it does not produce buttons, callbacks, or dispatch tokens.
-- **Rejected alternative:** Plan C v0.2 — SpiritResponse emits surfaceButtons; renderer parses buttons from response text.
+- **Decision:** The renderer is a deterministic view-model consumer. The LLM produces semantic blocks; it does not produce buttons, callbacks, or dispatch tokens.
+- **Rejected alternative:** An earlier plan proposed that the agent response emit dispatch-token fields and the renderer parse buttons from response text.
 - **Why:** Rejected alternative blurred the trust boundary (see L1.2, FM-1). Producer/consumer split makes prompt regressions independent of UI regressions.
 - **Doctrine impact:**
   - Added L1.2 (producer/consumer split)
   - Added FM-1 (LLM-generated UI actions)
-  - Plan C v0.2 doc moved to `docs/superpowers/plans/superseded/`.
+  - The rejected plan doc moved to `docs/plans/superseded/`.
 ```
 
 Not every doctrine entry needs a DR — only those where the team considered a specific alternative and chose against it. The DR prevents re-litigation.
@@ -163,7 +163,7 @@ Team failure-memory is **de-personalized**. No names, no blame, no moral evaluat
 
 **How it failed:** Semantic generation and trusted runtime behavior became coupled. Every LLM regression was a UI regression.
 
-**Evidence:** Plan C v0.2 was SUPERSEDED on 2026-02-25 after the producer/consumer boundary was clarified.
+**Evidence:** An earlier proposal was SUPERSEDED on 2026-02-25 after the producer/consumer boundary was clarified.
 
 **Future detection:** Any design where generated text becomes callback data, ids, links, or state transitions.
 

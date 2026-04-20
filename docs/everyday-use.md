@@ -167,7 +167,7 @@ And carefully triage: still valid / needs revision / superseded. A pivot doesn't
 **Developer says:**
 - "Use the project-doctrine-builder to set this up for my trading agent."
 
-**Agent does:** NOT copy Decision Spirit's doctrine. Use the `skills/project-doctrine-builder/` skill to:
+**Agent does:** NOT transplant any other project's doctrine. Use the `skills/project-doctrine-builder/` skill to:
 - Ask about the new project's domain core
 - Identify its worst-case wrong version
 - Gather existing failure memory

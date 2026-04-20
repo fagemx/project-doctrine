@@ -50,7 +50,7 @@ For what a healthy L3 entry looks like:
 >
 > **Why it works here:** Our plans tend to over-specify architecture and under-specify execution. The round-2 catches missing invariants before implementation locks them in. We've shipped 5 PRs using this pattern; every round-2 surfaced ≥3 blockers that would have cost hours to debug post-implementation.
 >
-> **Concrete example:** PR #229 (Surface Renderer v0.1) — round-2 found 5 issues including a broken-typecheck commit state and a truncation-vs-omit policy mistake. All patched pre-execution.
+> **Concrete example:** PR #128 (renderer v0.1) — round-2 found 5 issues including a broken-typecheck commit state and a truncation-vs-omit policy mistake. All patched pre-execution.
 
 ---
 

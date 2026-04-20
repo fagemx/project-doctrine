@@ -51,38 +51,38 @@ See [`docs/taste-examples.md`](../../../docs/taste-examples.md) in the project-d
 
 > **TE-1: Confirmation reply after a user action**
 >
-> **Situation:** User just confirmed a handbook page via an inline button. We reply to acknowledge.
+> **Situation:** User just saved a draft via an inline button. The agent replies to acknowledge.
 >
 > **Good:**
 > ```
-> 手帳頁收好了。
-> [封存] [結案]
+> Draft saved.
+> [Edit] [Discard]
 > ```
 >
 > **Bad:**
 > ```
-> ✨ I've successfully saved your handbook page! Would you like me to set a reminder
-> or share it with others? Let me know what you'd like to do next.
+> ✨ I've successfully saved your draft! Would you like me to set a reminder
+> or share it with collaborators? Let me know what you'd like to do next.
 > ```
 >
 > **Why good wins:**
-> - L1: product is a co-presence creature, not an assistant. "Successfully" is corporate voice; emoji prefix is performative.
-> - L6 (6.5): shared artifact is the paper on the table. The buttons *are* the next state; making them clickable beats asking a question.
+> - L1: product is a quiet editor, not a chatty assistant. "Successfully" is corporate voice; emoji prefix is performative.
+> - L6: the buttons *are* the next state; making them clickable beats asking a question.
 > - The bad version turns a quiet completion into a menu.
 
 > **TE-2: Where new surface-level features live**
 >
-> **Situation:** Adding a new Telegram callback for "mark as read."
+> **Situation:** Adding a new callback for "mark as read."
 >
 > **Good:**
-> - New `markReadHandbookPage` helper in `src/spirit/handbook-store.ts` mirroring lifecycle helpers (read → state check → mutate → `atomicWriteFileSync`)
-> - `handbook_mark_read:` callback handler in `bot-callbacks.ts`, lock-wrapped, mirroring archive/settle
+> - New `markItemRead` helper in `src/data/items-store.ts` mirroring lifecycle helpers (read → state check → mutate → atomic write)
+> - `item_mark_read:` callback handler in the channel adapter, lock-wrapped, mirroring archive/settle
 > - Zero prompt / renderer / type change
 >
 > **Bad:**
 > - Add `markRead` hint to the LLM prompt so the model knows to emit a "mark read" intent
-> - Parse intent from `SpiritResponse`, route via new pipeline branch
-> - Expand `creature-prompt.ts` with a new section
+> - Parse intent from `AgentResponse`, route via new pipeline branch
+> - Expand the main agent prompt with a new section
 >
 > **Why good wins:**
 > - Violates producer/consumer split (L1) — model shouldn't own dispatch

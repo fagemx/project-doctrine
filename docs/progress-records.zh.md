@@ -75,17 +75,17 @@
 範例：
 
 ```markdown
-# Narrative Log: Surface Renderer 的 producer/consumer 切分
+# Narrative Log: Renderer 的 producer/consumer 切分
 
-一開始 Plan C 想讓 assistant 直接在 reply 裡發出互動 surface 指令。
+一開始某份舊 plan 想讓 assistant 直接在 reply 裡發出互動 surface 指令。
 看起來很吸引人，因為 button 感覺自然。
 
 但它模糊了一個信任邊界：生成的文字會變成 UI 行為。
 
 後來切分浮現：
-- Stage 2 產出 semantic visual blocks
-- Runtime 決定性地渲染 lifecycle buttons
-- Telegram adapter 只消費 trusted view model
+- 第二階段 LLM 產出 semantic blocks
+- Runtime code 決定性地渲染互動元素
+- Channel adapter 只消費 trusted view model
 
 Doctrine candidate：
 LLM 產生語義材料。Runtime 擁有 trusted action surface。

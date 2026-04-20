@@ -33,7 +33,7 @@ A sentence like "the product should feel thoughtful" compresses judgment into vo
 
 One sentence. Names the specific moment where taste is being applied.
 
-**Good:** "User just confirmed a handbook page via an inline button. We reply to acknowledge."
+**Good:** "User just saved a draft via an inline button. The agent replies to acknowledge."
 
 **Bad:** "When the user does something."
 
@@ -49,33 +49,33 @@ One sentence. Names the specific moment where taste is being applied.
 
 > **Good:**
 > ```
-> 手帳頁收好了。
-> [封存] [結案]
+> Draft saved.
+> [Edit] [Discard]
 > ```
 >
 > **Bad:**
 > ```
-> ✨ I've successfully saved your handbook page! Would you like me to set a reminder
-> or share it with others? Let me know what you'd like to do next.
+> ✨ I've successfully saved your draft! Would you like me to set a reminder
+> or share it with collaborators? Let me know what you'd like to do next.
 > ```
 
 They differ in tone/register (quiet completion vs. performative). That's one axis.
 
 **Example (bad — too many axes):**
 
-> **Good:** short, Chinese, quiet, has buttons
-> **Bad:** long, English, emoji-prefixed, asks a question, no buttons
+> **Good:** short, quiet, has buttons
+> **Bad:** long, emoji-prefixed, asks a question, no buttons
 
-Now the reader doesn't know: is the taste call about length? language? emoji? buttons? question vs. statement?
+Now the reader doesn't know: is the taste call about length? emoji? buttons? question vs. statement?
 
 ### Why good wins
 
 **Project-specific reason.** Not a generic best practice.
 
 **Good:**
-> L1.1 (product is a co-presence creature, not an assistant). "Successfully" is corporate voice; emoji prefix is performative. The bad version turns a quiet completion into a menu.
+> L1.1 (product is a quiet editor, not a chatty assistant). "Successfully" is corporate voice; emoji prefix is performative. The bad version turns a quiet completion into a menu.
 
-This could only apply to *this* project — "co-presence creature" is a project-specific concept.
+This could only apply to *this* project — "quiet editor, not a chatty assistant" is the project's specific stance.
 
 **Bad:**
 > Shorter copy is better. Avoid unnecessary emoji.

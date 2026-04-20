@@ -30,13 +30,13 @@ A capable agent with only a handoff will execute the wrong plan cleanly. A capab
 
 ### Handoff entry (good)
 
-> **2026-04-20** — Merged PR #229 (Surface Renderer v0.1). Handbook pages now render Telegram lifecycle buttons. Store-layer idempotency gap flagged in review → follow-up plan written at `docs/superpowers/plans/2026-04-20-handbook-store-idempotency-guards-v0.md`. Next: execute that plan, then manual Telegram smoke.
+> **2026-04-20** — Merged PR #128 (citation-in-response feature v0.1). Reports now render source-row citations in every answer. Store-layer idempotency gap flagged in review → follow-up plan written at `docs/plans/2026-04-20-citation-store-idempotency-v0.md`. Next: execute that plan, then manual smoke against the vendor LLM.
 
 Useful. Temporal. Decays in weeks.
 
 ### Doctrine entry (good)
 
-> **Producer/consumer split.** LLMs may propose semantic structure (`visual.blocks`, `trace`, `relation_hints`). Deterministic runtime code owns button rendering, callback routing, state transitions, and trust boundaries. We paid for this with v0.2 (SUPERSEDED): the model was allowed to emit button syntax and `surfaceButtons` on `SpiritResponse`. It blurred responsibility and made every LLM regression into a UI regression. Never again put dispatch-critical tokens in generated text.
+> **Producer/consumer split.** LLMs may propose semantic structure (tagged blocks, intents, references). Deterministic runtime code owns button rendering, callback routing, state transitions, and trust boundaries. We paid for this with v0.2 (SUPERSEDED): the model was allowed to emit dispatch-critical tokens directly in its response text. It blurred responsibility and made every LLM regression into a UI regression. Never again put dispatch-critical tokens in generated text.
 
 Durable. Explains why a whole class of future temptations will be refused.
 
@@ -45,7 +45,7 @@ Durable. Explains why a whole class of future temptations will be refused.
 ### Handoff failure: "true but useless"
 
 ```
-Merged PR #229. Next: idempotency plan.
+Merged PR #128. Next: idempotency plan.
 ```
 
 Technically accurate. A fresh agent reading this has no way to know:
@@ -56,10 +56,10 @@ Technically accurate. A fresh agent reading this has no way to know:
 ### Doctrine failure: "stale beliefs"
 
 ```
-"Shared artifact pending" — we're building a collaborative memory surface.
+"Central memory layer pending" — we're building a collaborative memory surface.
 ```
 
-This was true three months ago. Now it's replaced by the room-mecha-three-books model. An agent loading this doctrine will plan toward a frame that no longer exists.
+This was true three months ago. Now it's replaced by a newer architectural framing. An agent loading this doctrine will plan toward a frame that no longer exists.
 
 **Handoff fails when too thin. Doctrine fails when not refreshed.**
 
@@ -84,7 +84,7 @@ This was true three months ago. Now it's replaced by the room-mecha-three-books 
 
 ## Where doctrine ends and memory begins
 
-**Memory** (user memory, Claude auto-memory, etc) holds facts: "user prefers squash merges", "this repo uses vitest", "the bot is @ScrapSpriteBot". Stateful, specific, often personal.
+**Memory** (user memory, Claude auto-memory, etc) holds facts: "user prefers squash merges", "this repo uses vitest", "the chat bot's handle is X". Stateful, specific, often personal.
 
 **Doctrine** holds stance: "we separate semantic production from rendering", "we refuse LLM-generated UI actions", "we test with real LLMs not mocks". Collective, reusable, carries *why*.
 
