@@ -6,21 +6,7 @@
 > _Handoff 告訴代理發生了什麼。
 > Doctrine 教代理怎麼判斷。_
 
-大部分 AI 代理的 handoff 只告訴下一個代理**發生了什麼**。Project Doctrine 教下一個代理**怎麼判斷**。
-
-Handoff 會說：
-
-> 我們 merge 了 PR #42。下一步，實作 renderer。
-
-Doctrine 會說：
-
-> 這個專案把語義生成和 UI 渲染分開。LLM 可以提結構，但 button、callback、state 轉換、信任邊界是 deterministic runtime 的責任。
-
-這個差異很重要。
-
 > 英文版 README：[`README.md`](README.md)
-
----
 
 ## 從這裡開始：最小可行 Doctrine（30 分鐘）
 
@@ -40,11 +26,27 @@ Repo 看起來大，但**第一次上手很小**。**Minimum Viable Doctrine（M
 
 **就這樣。** MVD 不是「不完整」——它是**足夠有用**。其他全部之後再說。
 
-→ [`docs/getting-started.zh.md`](docs/getting-started.zh.md) / English: [`docs/getting-started.md`](docs/getting-started.md)
+→ **[`docs/getting-started.zh.md`](docs/getting-started.zh.md)** / English: **[`docs/getting-started.md`](docs/getting-started.md)**
 
 **兩條規則：**
 - **某個檔案的缺席沒在傷你，就讓它空著。**
 - **不要製造 doctrine debt**——不要用空話填模板、不要在沒有真實 scar 的情況下寫 L6。
+
+---
+
+## 為什麼是 doctrine，不只是 handoff？
+
+大部分 AI 代理的 handoff 只告訴下一個代理**發生了什麼**。Project Doctrine 教下一個代理**怎麼判斷**。
+
+Handoff 會說：
+
+> 我們 merge 了 PR #42。下一步，實作 renderer。
+
+Doctrine 會說：
+
+> 這個專案把語義生成和 UI 渲染分開。LLM 可以提結構，但 button、callback、state 轉換、信任邊界是 deterministic runtime 的責任。
+
+這個差異很重要。
 
 ---
 

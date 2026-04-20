@@ -8,20 +8,6 @@
 
 > 中文版 README：[`README.zh.md`](README.zh.md)
 
-Most AI agent handoffs tell the next agent *what happened*. Project Doctrine teaches the next agent *how to judge*.
-
-A handoff says:
-
-> We merged PR #42. Next, implement the renderer.
-
-A doctrine says:
-
-> This project separates semantic production from UI rendering. LLMs may propose structure, but deterministic runtime code owns buttons, callbacks, state transitions, and trust boundaries.
-
-That difference matters.
-
----
-
 ## Start here: Minimum Viable Doctrine (30 minutes)
 
 > **Start with MVD. Expand only when absence hurts.**
@@ -40,11 +26,27 @@ The repo is large, but the **first run is small**. A **Minimum Viable Doctrine (
 
 That's it. MVD is not "incomplete" — it's **useful**. Everything else is opt-in later.
 
-→ [`docs/getting-started.md`](docs/getting-started.md) / 中文：[`docs/getting-started.zh.md`](docs/getting-started.zh.md)
+→ **[`docs/getting-started.md`](docs/getting-started.md)** / 中文：**[`docs/getting-started.zh.md`](docs/getting-started.zh.md)**
 
 **Two rules:**
 - **If a file's absence isn't actively hurting you, leave it empty.**
 - **Do not create doctrine debt** — never fill a template with empty words or write L6 entries without real scars.
+
+---
+
+## Why doctrine, not just handoff?
+
+Most AI agent handoffs tell the next agent *what happened*. Project Doctrine teaches the next agent *how to judge*.
+
+A handoff says:
+
+> We merged PR #42. Next, implement the renderer.
+
+A doctrine says:
+
+> This project separates semantic production from UI rendering. LLMs may propose structure, but deterministic runtime code owns buttons, callbacks, state transitions, and trust boundaries.
+
+That difference matters.
 
 ---
 
