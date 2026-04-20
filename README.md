@@ -321,28 +321,26 @@ Use **neither** if:
 
 **Doctrine is useful after a project has scars.**
 
-## When To Use Project Doctrine (summary)
+## When Should You Create One?
 
-Use it when:
+**Not on day one.**
 
-- a project has accumulated enough lessons that normal handoffs are not enough
-- multiple agents or multiple humans work on the same project
-- old context keeps misleading new agents
-- the user keeps correcting the same mistakes
-- product taste matters
-- architecture decisions have hidden reasons
-- long-running agent work needs continuity
-- a project wants to become a self-improving factory
+Create a Project Doctrine after the project has:
 
-## When Not To Use It
+- a working skeleton
+- a few high-context sessions
+- repeated agent mistakes or user corrections
+- rejected directions
+- meaningful failure memory
+- enough taste examples to show what belongs and what does not
 
-Do not use this if:
+Too early, doctrine becomes **aspiration**.
+Too late, doctrine becomes **archaeology**.
 
-- the project is tiny
-- there is no repeated agent work
-- a README is enough
-- no real failures have happened yet
-- the goal is just task tracking
+The best time is: **after skeleton, before sprawl.**
+
+Full guide + readiness rubric + three creation modes (lightweight / full / recovery):
+[`docs/when-to-use.md`](docs/when-to-use.md) / 中文：[`docs/when-to-use.zh.md`](docs/when-to-use.zh.md)
 
 ---
 
