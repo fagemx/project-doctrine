@@ -2,7 +2,7 @@
 
 > **Six questions a new agent answers before taking on real work.** Reading the doctrine is not entering the school. Answering these is.
 
-See [`docs/apprenticeship-protocol.md`](../../docs/apprenticeship-protocol.md) for the full protocol.
+See [`docs/apprenticeship-protocol.md`](../../../docs/apprenticeship-protocol.md) for the full protocol.
 
 ---
 

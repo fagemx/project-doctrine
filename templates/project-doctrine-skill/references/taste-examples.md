@@ -4,7 +4,7 @@
 
 Adjectives are weak. Contrast pairs teach.
 
-See [`docs/taste-examples.md`](../../docs/taste-examples.md) in the project-doctrine repo for the full method.
+See [`docs/taste-examples.md`](../../../docs/taste-examples.md) in the project-doctrine repo for the full method.
 
 ---
 

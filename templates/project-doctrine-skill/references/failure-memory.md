@@ -10,7 +10,7 @@ Each entry has four fields:
 
 If any field is vague, the entry isn't useful yet.
 
-See [`docs/failure-memory.md`](../../docs/failure-memory.md) in the project-doctrine repo for the full method.
+See [`docs/failure-memory.md`](../../../docs/failure-memory.md) in the project-doctrine repo for the full method.
 
 ---
 

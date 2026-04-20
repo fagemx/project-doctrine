@@ -1,12 +1,16 @@
 ---
 name: <project>-doctrine
 description: Project posture loader for <project>. Load before planning, reviewing, or making non-trivial decisions. Teaches how this project judges — not just what happened.
-load-protocol:
+---
+
+<!--
+Load protocol (read in this order):
   - references/state-snapshot.md
   - references/layer-1-ideology.md
   - references/layer-5-thinking-modes.md
   - references/layer-6-heart-methods.md
-on-demand:
+
+On-demand references:
   - references/layer-2-knowledge.md
   - references/layer-3-methods.md
   - references/layer-4-sops.md
@@ -16,10 +20,16 @@ on-demand:
   - references/bootstrap-prompt.md
   - references/provenance.md
   - references/incubation.md
-team-only:
+
+Team-only (solo projects can delete):
   - references/governance.md
   - references/decision-records.md
----
+
+These lists live in body (not frontmatter) so that strict skill
+validators (Codex, some Claude runtimes) accept this file.
+The human-readable equivalents are enumerated below.
+-->
+
 
 # <project> Doctrine
 
