@@ -306,6 +306,24 @@ Skip it for typos, formatting fixes, and trivial lookups.
 
 Full guide: [`docs/everyday-use.md`](docs/everyday-use.md) / 中文：[`docs/everyday-use.zh.md`](docs/everyday-use.zh.md)
 
+## Should doctrine live in the repo?
+
+Usually, yes.
+
+> **If a doctrine entry affects how the project should be built, reviewed, or maintained, it belongs with the project.**
+
+Three layers:
+
+- **`main`** — stable, shareable, public-safe (state-snapshot, L1, failure-memory, taste-examples, bootstrap-prompt, …)
+- **branches / `references/incubation.md`** — drafts, candidates, round-in-progress
+- **Outside repo (or private repo)** — sensitive, personal, speculative; individual-profile content never commits
+
+**Preferred default path:** `docs/project-doctrine/` (agent-neutral; runtime adapters like `.claude/skills/` can be symlinks).
+
+For public / open-source repos: only public-decision-based content. Archaeology Mode never profiles individuals. Solo doctrine still belongs in version control — just make the repo private.
+
+Full guide (branch strategy, decision flow, public/private split, archaeology ethics): [`docs/repo-placement.md`](docs/repo-placement.md) / 中文：[`docs/repo-placement.zh.md`](docs/repo-placement.zh.md)
+
 ## Progress records are flexible
 
 Different records serve different time scales — and no project needs all of them.

@@ -310,6 +310,24 @@ Assistant 說「我可以幫你封存」但沒有對應的 state 轉換發生。
 
 ---
 
+## Doctrine 該不該進 repo？
+
+通常**要**。
+
+> **只要這條 doctrine 會影響專案怎麼開發、review、維護，它就應該跟專案一起 version-control。**
+
+三層：
+
+- **`main`** — 穩定、可分享、可公開（state-snapshot、L1、failure-memory、taste-examples、bootstrap-prompt、…）
+- **分支 / `references/incubation.md`** — 草稿、candidate、進行中
+- **Repo 外（或 private repo）** — 敏感、個人、推測性；profile 個人的內容永不 commit
+
+**建議預設路徑：`docs/project-doctrine/`**（agent-neutral；`.claude/skills/` 等 runtime adapter 可以用 symlink）。
+
+**公開 / 開源 repo：** 只放公開決策相關內容。Archaeology Mode 永遠不 profile 個人。個人 doctrine 也該進版本控制——repo 設 private 就好。
+
+完整指南（分支策略、決策流、公開/私有切分、archaeology 倫理）：[`docs/repo-placement.zh.md`](docs/repo-placement.zh.md) / English: [`docs/repo-placement.md`](docs/repo-placement.md)
+
 ## 進度紀錄是彈性的
 
 不同紀錄服務不同時間尺度——而且沒有一個專案需要全部都用。

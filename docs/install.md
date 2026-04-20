@@ -76,14 +76,20 @@ Where to put the doctrine directory depends on your agent runtime.
 
 | Runtime | Recommended path | Why |
 |---|---|---|
+| **Agent-neutral / open-source (preferred default)** | `docs/project-doctrine/` | Reads like normal project docs; no runtime naming leakage |
 | **Claude Code** (project-local) | `.claude/skills/<project>-doctrine/` | Auto-loaded by Claude Code skill resolver |
-| **Claude Code** (project-neutral) | `docs/skills/<project>-doctrine/` | Stays under `docs/`, not runtime-specific |
-| **Codex CLI** | `docs/skills/<project>-doctrine/` + reference from `AGENTS.md` | Codex reads `AGENTS.md`; the doctrine lives as plain docs |
-| **Gemini CLI** | `docs/skills/<project>-doctrine/` + reference from `GEMINI.md` | Same idea as Codex |
-| **Cursor** | `docs/skills/<project>-doctrine/` + pointer from `.cursor/rules/` | Cursor rules reference the doctrine path |
-| **No specific runtime / agent-neutral** | `docs/project-doctrine/` or `docs/skills/<project>-doctrine/` | Plain markdown; any agent can read it |
+| **Codex CLI** | `docs/project-doctrine/` + reference from `AGENTS.md` | Codex reads `AGENTS.md`; the doctrine lives as plain docs |
+| **Gemini CLI** | `docs/project-doctrine/` + reference from `GEMINI.md` | Same idea as Codex |
+| **Cursor** | `docs/project-doctrine/` + pointer from `.cursor/rules/` | Cursor rules reference the doctrine path |
+| **Legacy / earlier-in-this-repo-references** | `docs/skills/<project>-doctrine/` | Still valid; earlier templates referenced this path |
 
-**If in doubt, use `docs/skills/<project>-doctrine/`.** It works for every runtime (some auto-load, others need a pointer from their config file) and doesn't lock you into one tool.
+**If in doubt, use `docs/project-doctrine/`.** It's agent-neutral, GitHub-readable, and can be symlinked into `.claude/skills/` if Claude Code auto-loading is desired:
+
+```bash
+ln -s ../../docs/project-doctrine .claude/skills/<project>-doctrine
+```
+
+For the full version-control, public/private, and branch-strategy story (what belongs in `main` vs branches vs outside the repo), see [`repo-placement.md`](repo-placement.md).
 
 ### Wiring it into your runtime's config
 
