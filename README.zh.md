@@ -22,20 +22,29 @@ Doctrine 會說：
 
 ---
 
-## 從這裡開始（30 分鐘）
+## 從這裡開始：最小可行 Doctrine（30 分鐘）
 
-Repo 看起來大，但**第一次上手很小**：
+> **先建立 MVD。感到缺席才擴充。**
+>
+> _第一份 doctrine 不需要完整。它只需要救下一個 session。_
 
-1. 把模板複製到你的專案
-2. 填 **4 個檔案**（state-snapshot、L1-ideology、failure-memory、bootstrap-prompt）
-3. 在 runtime config（CLAUDE.md / AGENTS.md / …）加一行引用
-4. 開新代理 session 測試
+Repo 看起來大，但**第一次上手很小**。**Minimum Viable Doctrine（MVD，最小可行 Doctrine）** 就是：
 
-**就這樣。** 其他全部之後再說——**感到某個檔案缺席**才加。
+- **4 個檔案，30 分鐘填完：**
+  1. `state-snapshot.md` — 專案現在在哪
+  2. `layer-1-ideology.md` — 什麼必須保持為真（3 條）
+  3. `failure-memory.md` — 什麼錯不能再犯（3 條）
+  4. `bootstrap-prompt.md` — 下一個代理怎麼載入這個專案
+- **一行引用**加到 runtime config（CLAUDE.md / AGENTS.md / GEMINI.md）
+- **一次測試**——新代理 session 能答出：當前狀態、一條不可變心法、一個誘人錯誤
+
+**就這樣。** MVD 不是「不完整」——它是**足夠有用**。其他全部之後再說。
 
 → [`docs/getting-started.zh.md`](docs/getting-started.zh.md) / English: [`docs/getting-started.md`](docs/getting-started.md)
 
-**規則：某個檔案的缺席沒在傷你，就讓它空著。**
+**兩條規則：**
+- **某個檔案的缺席沒在傷你，就讓它空著。**
+- **不要製造 doctrine debt**——不要用空話填模板、不要在沒有真實 scar 的情況下寫 L6。
 
 ---
 

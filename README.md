@@ -22,20 +22,29 @@ That difference matters.
 
 ---
 
-## Start here (30 minutes)
+## Start here: Minimum Viable Doctrine (30 minutes)
 
-The repo is large, but the **first run is small**:
+> **Start with MVD. Expand only when absence hurts.**
+>
+> _The first doctrine does not need to be complete. It only needs to save the next session._
 
-1. Copy the template into your project
-2. Fill **4 files** (state-snapshot, L1-ideology, failure-memory, bootstrap-prompt)
-3. Add one reference line to your runtime config (CLAUDE.md / AGENTS.md / ...)
-4. Test with a fresh agent session
+The repo is large, but the **first run is small**. A **Minimum Viable Doctrine (MVD)** is:
 
-That's it. Everything else is opt-in later — add files only when you feel their absence.
+- **4 files**, filled in 30 minutes:
+  1. `state-snapshot.md` — where the project is now
+  2. `layer-1-ideology.md` — what must stay true (3 entries)
+  3. `failure-memory.md` — what mistakes should not repeat (3 entries)
+  4. `bootstrap-prompt.md` — how the next agent should load the project
+- **One reference line** in your runtime config (CLAUDE.md / AGENTS.md / GEMINI.md)
+- **One test** — a fresh agent session answers: current state, one durable conviction, one tempting mistake
+
+That's it. MVD is not "incomplete" — it's **useful**. Everything else is opt-in later.
 
 → [`docs/getting-started.md`](docs/getting-started.md) / 中文：[`docs/getting-started.zh.md`](docs/getting-started.zh.md)
 
-**Rule:** if a file's absence isn't actively hurting you, leave it empty.
+**Two rules:**
+- **If a file's absence isn't actively hurting you, leave it empty.**
+- **Do not create doctrine debt** — never fill a template with empty words or write L6 entries without real scars.
 
 ---
 

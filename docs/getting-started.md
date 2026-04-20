@@ -1,12 +1,27 @@
-# Getting Started
+# Getting Started — Minimum Viable Doctrine (MVD)
 
 > **30 minutes. 4 files. One runtime wire-up. Stop there.**
 >
-> Everything else is opt-in later.
+> _The first doctrine does not need to be complete. It only needs to save the next session._
 
-This doc is the minimum viable path. The repo has a lot of methodology — you don't need all of it to start. You need the four files that let an agent load the project's stance, and a one-line reference in your runtime config.
+This doc builds a **Minimum Viable Doctrine (MVD)**. The repo has a lot of methodology — you don't need all of it to start. You need the four files that let an agent load the project's stance, and a one-line reference in your runtime config.
 
-If you follow this guide in order, you'll have a working doctrine in half an hour. If you try to do the "full" version on day 1, you'll stall — most doctrines that fail, fail because they were too comprehensive on day 1, not because they were too thin.
+## What MVD is
+
+A Minimum Viable Doctrine is **the smallest set of files that can help a future agent avoid repeating your context loss.**
+
+It is **not complete.** It is **useful.**
+
+It contains exactly:
+
+1. `state-snapshot.md` — where the project is now
+2. `layer-1-ideology.md` — what must stay true
+3. `failure-memory.md` — what mistakes should not repeat
+4. `bootstrap-prompt.md` — how the next agent should load the project
+
+If you follow this guide in order, you'll have an MVD in half an hour. If you try to do the "full" version on day 1, you'll stall — most doctrines that fail, fail because they were too comprehensive on day 1, not because they were too thin.
+
+**Start with MVD. Expand only when absence hurts.**
 
 ---
 
@@ -145,15 +160,33 @@ Your next session will feel different. Not because the doctrine is complete — 
 
 ## What NOT to do on day 1
 
-- Don't fill in all 14 template files. Most will stay empty for weeks.
-- Don't write L6 heart methods yet. L6 requires real scars; if you're uncertain, incubate.
-- Don't write taste examples yet unless you have an obvious good/bad pair in mind. You can add them when the "no, not like that" moment next happens.
-- Don't write apprenticeship-check yet. Template default is fine.
-- Don't write L2 / L3 / L4 yet. They populate themselves as you validate work.
-- Don't write provenance yet. Add it the first time you promote a scar to L6.
-- Don't add governance.md / decision-records.md unless you're in Team Mode AND you already have contested decisions.
+Do NOT create these files on day 1 unless the specific criterion is met:
+
+- **L2 (knowledge)** — unless the project has many authoritative source docs that agents keep misreading
+- **L3 (methods)** — unless a method has been validated across ≥ 2 situations
+- **L4 (SOPs)** — unless a repeated procedure has recurred 3+ times
+- **L5 (thinking modes)** — unless you can name a reasoning posture you actively use
+- **L6 (heart methods)** — unless real scars exist. No scar, no L6.
+- **taste-examples** — unless you have concrete good/bad pairs in mind
+- **apprenticeship-check** (custom version) — template default works for v0
+- **provenance** — unless doctrine entries have been promoted and need traceability
+- **governance** (Team Mode) — unless there is a team AND it needs owners
+- **decision-records** (Team Mode) — unless decisions actually need review
+- **incubation** — unless you already have candidates waiting
 
 If the absence of a file isn't actively hurting you, leave it empty.
+
+### Do not create doctrine debt
+
+The opposite failure mode of "not enough doctrine" is **doctrine debt** — files full of empty words, L6 entries without scars, taste examples that are just style rules. Debt is worse than absence because:
+
+- Future agents waste attention reading low-signal content
+- The doctrine loses credibility ("why are these entries here?")
+- Maintenance cost grows without maintenance value
+
+**Never fill a template slot just because it exists.** An empty file with a comment "populate when X happens" is better than a file full of placeholder convictions.
+
+If you can't write an entry with concrete specificity, it's not ready.
 
 ---
 

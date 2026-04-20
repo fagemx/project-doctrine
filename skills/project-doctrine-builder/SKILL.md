@@ -73,13 +73,38 @@ Not all files need to be fully populated on v0 — see `references/templates.md`
 - [`references/apprenticeship-protocol.md`](references/apprenticeship-protocol.md) — the 6-question check
 - [`references/templates.md`](references/templates.md) — the full template set for copy-paste
 
-## Default: 30-minute minimum viable path
+## Default: Minimum Viable Doctrine (MVD)
 
 **Do NOT walk the user through all 14 files on day 1.** That is the most common failure mode for this skill.
 
-Default to the **minimum viable doctrine**: 4 files + runtime wiring, in 30 minutes. Everything else is opt-in later.
+**Default to MVD. Full doctrine is opt-in.**
 
-See [`docs/getting-started.md`](../../docs/getting-started.md) for the canonical 30-minute path. Follow it. Don't improvise.
+A **Minimum Viable Doctrine (MVD)** is 4 files + runtime wiring, in 30 minutes. See [`docs/getting-started.md`](../../docs/getting-started.md) for the canonical path. Follow it. Don't improvise.
+
+### Agent output format (use this verbatim)
+
+When a user asks you to "build a doctrine" / "set up project-doctrine" / similar, your **first reply** should be something like:
+
+> I'll start with **Minimum Viable Doctrine (MVD)**, not the full template.
+>
+> I'll create only:
+> 1. `state-snapshot.md`
+> 2. `layer-1-ideology.md`
+> 3. `failure-memory.md`
+> 4. `bootstrap-prompt.md`
+>
+> I'll leave the rest empty until their absence becomes a real problem.
+
+Then proceed with the 30-minute path. Do NOT start scaffolding the full 14-file template before the user explicitly asks for it.
+
+### Two anti-debt rules
+
+Apply both when writing entries with the user:
+
+1. **No scar, no L6.** If the user can't name a specific failure behind a proposed L6 entry, don't write it. Leave L6 empty or incubate the candidate.
+2. **No generic values in L1.** If a proposed L1 entry could apply to any project ("we care about quality," "users come first"), reject it. Push for project-specific claims with violation tests.
+
+Better to leave a file empty than to fill it with doctrine debt.
 
 ### The 4-file minimum (always)
 

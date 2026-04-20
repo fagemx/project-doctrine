@@ -1,12 +1,27 @@
-# 新手上路（Getting Started）
+# 新手上路：最小可行 Doctrine（MVD）
 
 > **30 分鐘。4 個檔案。一個 runtime 連上去。到此為止。**
 >
-> 其他全部之後再說。
+> _第一份 doctrine 不需要完整。它只需要救下一個 session。_
 
-這份文件是**最小可行路徑**。Repo 裡累積了很多方法論——**不需要**全部用上才能開始。你需要的是：能讓代理載入專案姿態的四個檔案，加上 runtime config 裡的一行引用。
+這份文件建立一個**最小可行 Doctrine（Minimum Viable Doctrine, MVD）**。Repo 裡累積了很多方法論——**不需要**全部用上才能開始。
 
-按順序做，半小時就有一個能用的 doctrine。如果 day 1 想做「完整版」，你會卡住——**大部分失敗的 doctrine，是因為 day 1 太完整，不是太薄**。
+## MVD 是什麼
+
+最小可行 Doctrine 是**最小的檔案集合，能幫助未來的代理不要重犯你現在的 context loss**。
+
+它**不完整**。它**足夠有用**。
+
+正好包含：
+
+1. `state-snapshot.md` — 專案現在在哪
+2. `layer-1-ideology.md` — 什麼必須保持為真
+3. `failure-memory.md` — 什麼錯不能再犯
+4. `bootstrap-prompt.md` — 下一個代理怎麼載入這個專案
+
+按順序做，半小時就有 MVD。如果 day 1 想做「完整版」，你會卡住——**大部分失敗的 doctrine，是因為 day 1 太完整，不是太薄**。
+
+**先建立 MVD。感到缺席才擴充。**
 
 ---
 
@@ -145,15 +160,33 @@ xcopy /E /I <project-doctrine-path>\templates\project-doctrine-skill docs\skills
 
 ## Day 1 不要做的事
 
-- **不要**把 14 個模板檔全部填。大部分會空著好幾週。
-- **不要**寫 L6 心法。L6 要真的有疤痕；不確定就放 incubation。
-- **不要**現在寫 taste-examples，除非你腦中已經有明確的好/壞對照。等下次「不對，不是這樣」的時候再加。
-- **不要**現在寫 apprenticeship-check。模板預設的就夠。
-- **不要**現在寫 L2 / L3 / L4。做事的時候自然會長出來。
-- **不要**現在寫 provenance。等第一次把疤痕升成 L6 的時候再加。
-- **不要**加 governance.md / decision-records.md——除非你是 Team Mode **且**已經有爭議決策。
+Day 1 **不要**建立下面這些檔案，除非對應條件成立：
+
+- **L2（knowledge）** — 除非專案有很多權威來源文件、代理一直讀錯
+- **L3（methods）** — 除非有方法在 ≥ 2 個情境被驗證過
+- **L4（SOPs）** — 除非有重複流程已經出現 3 次以上
+- **L5（thinking modes）** — 除非你能說出一個你主動在用的推理姿態
+- **L6（heart methods）** — 除非真的有 scar。**沒 scar 就沒 L6。**
+- **taste-examples** — 除非你腦中已經有明確的好/壞對照
+- **apprenticeship-check**（客製版）— 模板預設的 v0 就夠
+- **provenance** — 除非已經有 doctrine 條目升格、需要追溯
+- **governance**（Team Mode）— 除非有團隊**且**需要 owner
+- **decision-records**（Team Mode）— 除非決策真的需要 review
+- **incubation** — 除非你已經有待決 candidate
 
 **某個檔案的缺席沒在傷害你，就讓它空著。**
+
+### 不要製造 doctrine debt
+
+「doctrine 不夠多」的反面失敗模式是 **doctrine debt**——塞滿空話的檔案、沒有 scar 的 L6 條目、其實只是 style rule 的 taste examples。Debt 比缺席更糟，因為：
+
+- 未來代理浪費注意力在低訊號內容上
+- Doctrine 失去可信度（「這些條目為什麼在這？」）
+- 維護成本增加，維護價值不增加
+
+**不要只因為模板有位置就去填。** 一個有 comment「等到 X 發生時才填」的空檔案，比一個塞滿 placeholder 心法的檔案好。
+
+**寫不出具體到位的條目，就是它還沒準備好。**
 
 ---
 

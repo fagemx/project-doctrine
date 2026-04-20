@@ -394,9 +394,17 @@ For candidates that aren't obviously one action, use a triage record. See:
 
 ---
 
-## Anti-pattern: doctrine obesity
+## Anti-pattern: doctrine debt and doctrine obesity
 
-The failure mode most projects fall into:
+Two related failure modes:
+
+**Doctrine debt** (acquired on day 1) — files filled with empty words, L6 entries without scars, taste examples that are really style rules. Created by filling every template slot instead of leaving unready ones empty. See [`getting-started.md`](getting-started.md) for the prevention.
+
+**Doctrine obesity** (acquired over time) — the slow accumulation of low-signal entries, stale state, un-pruned history.
+
+Both produce the same symptom: a doctrine that is technically populated but **doesn't fire.**
+
+The failure mode most projects fall into (obesity):
 
 - Doctrine grows every week
 - Nothing gets deleted
