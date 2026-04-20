@@ -1,7 +1,10 @@
 # Project Doctrine
 
-> **Handoff tells an agent what happened.
-> Doctrine teaches an agent how to judge.**
+> **Use handoff when work needs to continue.
+> Use doctrine when judgment needs to continue.**
+>
+> _Handoff tells an agent what happened.
+> Doctrine teaches an agent how to judge._
 
 Most AI agent handoffs tell the next agent *what happened*. Project Doctrine teaches the next agent *how to judge*.
 
@@ -241,6 +244,24 @@ See [`docs/apprenticeship-protocol.md`](docs/apprenticeship-protocol.md).
 7. Use the doctrine before planning new work.
 
 See [`docs/migration-guide.md`](docs/migration-guide.md) for a step-by-step.
+
+## Everyday Use
+
+You don't "manage doctrine" every day. Most of the time you just tell your agent:
+
+> Read the project doctrine first.
+
+Use it at these moments:
+
+- **New session** → read doctrine
+- **Big plan** → check doctrine
+- **Review direction** → against doctrine
+- **Same mistake twice** → into doctrine
+- **Big milestone** → update doctrine
+
+Skip it for typos, formatting fixes, and trivial lookups.
+
+Full guide: [`docs/everyday-use.md`](docs/everyday-use.md) / 中文：[`docs/everyday-use.zh.md`](docs/everyday-use.zh.md)
 
 ---
 
