@@ -73,21 +73,58 @@ Not all files need to be fully populated on v0 — see `references/templates.md`
 - [`references/apprenticeship-protocol.md`](references/apprenticeship-protocol.md) — the 6-question check
 - [`references/templates.md`](references/templates.md) — the full template set for copy-paste
 
-## The bootstrap process (v0)
+## Default: 30-minute minimum viable path
 
-Order matters. Don't try to write all 12 files at once.
+**Do NOT walk the user through all 14 files on day 1.** That is the most common failure mode for this skill.
 
-1. **Observe.** Spend 15 minutes reviewing the user's current project. Read recent PRs, CLAUDE.md, any retros. Notice what the user explains twice in conversation.
-2. **Write state-snapshot first.** The volatile layer is the easiest to write and the highest-value to externalize.
-3. **Write L1 next.** 3–5 durable convictions. Each with a violation test.
-4. **Write L6 next (if scars exist).** One entry per real scar. If there are no scars, note that L6 is empty for now.
-5. **Write 3 failure-memory entries.** Pick the most-repeated tempting mistakes.
-6. **Write 3 taste examples.** The most recent "no, not like that — like this" moments.
-7. **Write L2 as an index.** Point at authoritative docs; don't duplicate them.
-8. **Write L5 (thinking modes).** 2–4 stable reasoning postures.
-9. **Write the apprenticeship check.** 6 questions, customized.
-10. **Write the bootstrap prompt.** Copy-paste loader for fresh sessions.
-11. **L3 and L4 can start empty or minimal.** Populate as methods validate and SOPs recur.
+Default to the **minimum viable doctrine**: 4 files + runtime wiring, in 30 minutes. Everything else is opt-in later.
+
+See [`docs/getting-started.md`](../../docs/getting-started.md) for the canonical 30-minute path. Follow it. Don't improvise.
+
+### The 4-file minimum (always)
+
+1. `state-snapshot.md` — current state, 1 screen
+2. `layer-1-ideology.md` — 3 entries with violation tests
+3. `failure-memory.md` — 3 four-field entries
+4. `bootstrap-prompt.md` — runtime loader (template, just replace placeholders)
+
+Stop there. Wire it into CLAUDE.md / AGENTS.md / GEMINI.md. Test with a fresh session. Done.
+
+### What NOT to do on first pass
+
+- L5 thinking modes → leave empty, add in week 1
+- L6 heart methods → ONLY if the user can name a concrete scar. Otherwise leave empty.
+- Taste examples → leave empty unless the user has an obvious good/bad pair
+- L2 / L3 / L4 → leave empty
+- Provenance → leave empty; add the first time an L6 entry gets promoted
+- Apprenticeship check → leave as template default (6 questions work as-is)
+- Governance / decision-records → ONLY if Team Mode AND contested decisions already exist
+- Archaeology templates → only for Archaeology Mode (different path)
+
+### When to walk through more files
+
+Walk through additional files only if:
+- The user explicitly asks for a comprehensive setup
+- You've completed the 4-file minimum AND the user asks "what's next"
+- A specific file's absence is actively hurting the user right now
+
+Default answer to "should we also set up X?": **"Not today. Add it when its absence hurts."**
+
+### The full bootstrap process (only when explicitly requested)
+
+If the user wants the comprehensive version beyond minimum viable:
+
+1. **Observe.** Review recent PRs, CLAUDE.md, retros. Notice patterns the user re-explains.
+2. **State-snapshot first.** Easiest, highest-value externalization.
+3. **L1.** 3–5 durable convictions with violation tests.
+4. **L6** (if scars exist). One entry per real scar.
+5. **3 failure-memory entries.** Most-repeated temptations.
+6. **3 taste examples.** Recent "no, not like that" moments.
+7. **L2 as index.** Point at authoritative docs.
+8. **L5 (thinking modes).** 2–4 stable postures.
+9. **Apprenticeship check** — customize 6 questions.
+10. **Bootstrap prompt** — runtime loader.
+11. **L3 / L4** can start empty. Populate as methods validate and SOPs recur.
 
 ## Critical rules
 
@@ -112,27 +149,38 @@ Order matters. Don't try to write all 12 files at once.
 When the user asks you to apply this skill:
 
 1. Announce ("I'm using the project-doctrine-builder skill...")
-2. Confirm the project is ready (see "When to use" above)
-3. Walk through the 11 bootstrap steps
-4. For each step, generate the content AND explain why it belongs there
-5. Write the files as you go
-6. At the end, run the apprenticeship check against the fresh doctrine to test it
+2. Confirm the project is ready (3 yes/no questions from `docs/getting-started.md`)
+3. Identify mode (one question: "who edits the doctrine?")
+4. Default to the **minimum viable 4-file path**. Walk through Step 1–5 of `docs/getting-started.md`, not the full bootstrap.
+5. Write the entries WITH the user, not FOR the user. Entries come from their experience.
+6. Stop when the 4 files are usable AND wired into runtime config.
+7. Explicitly name what you did NOT do: "I left L5 / L6 / taste-examples / etc empty on purpose. Add them when you feel the absence."
+8. Test with the user's own project context. Use the apprenticeship question ("what's current, what's durable, what's a tempting mistake") to verify the doctrine fires.
 
-## Completion criterion
+## Completion criteria
 
-The doctrine is v0-done when:
+### Minimum viable (default target)
 
-- [ ] state-snapshot.md is dated and current
-- [ ] layer-1-ideology.md has ≥3 entries with violation tests
-- [ ] layer-5-thinking-modes.md has ≥2 entries
-- [ ] layer-6-heart-methods.md has ≥1 entry with a scar (or is explicitly empty with a note)
-- [ ] failure-memory.md has ≥3 entries
-- [ ] taste-examples.md has ≥3 contrast pairs
-- [ ] apprenticeship-check.md has 6 customized questions
-- [ ] bootstrap-prompt.md has a copy-paste loader
-- [ ] A fresh agent can answer Q1–Q6 of the apprenticeship check project-specifically
+- [ ] `state-snapshot.md` is dated and covers current phase + recent + active + hard boundaries
+- [ ] `layer-1-ideology.md` has ≥3 entries, each with claim + why + violation test
+- [ ] `failure-memory.md` has ≥3 four-field entries
+- [ ] `bootstrap-prompt.md` has placeholders replaced with project name
+- [ ] Runtime config (CLAUDE.md / AGENTS.md / GEMINI.md) references the load protocol
+- [ ] A fresh agent session can answer "current state, one durable conviction, one tempting mistake" project-specifically
 
-After v0, the doctrine grows with the project. Weekly maintenance beats occasional rewrites.
+**That is v0-done.** Stop and ship.
+
+### Full (only when explicitly requested)
+
+- Above, plus:
+- [ ] `layer-5-thinking-modes.md` has ≥2 entries
+- [ ] `layer-6-heart-methods.md` has ≥1 entry with a scar (or explicitly empty with a note)
+- [ ] `taste-examples.md` has ≥3 contrast pairs
+- [ ] `apprenticeship-check.md` has 6 customized questions (template default may be fine)
+- [ ] `provenance.md` links L6 entries to their scars
+- [ ] `governance.md` + `decision-records.md` (Team Mode only)
+
+After v0, the doctrine grows with the project. Weekly maintenance beats occasional rewrites — but that's the user's job, not the bootstrap's.
 
 ## One-sentence principle
 

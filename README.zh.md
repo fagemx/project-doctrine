@@ -22,6 +22,23 @@ Doctrine 會說：
 
 ---
 
+## 從這裡開始（30 分鐘）
+
+Repo 看起來大，但**第一次上手很小**：
+
+1. 把模板複製到你的專案
+2. 填 **4 個檔案**（state-snapshot、L1-ideology、failure-memory、bootstrap-prompt）
+3. 在 runtime config（CLAUDE.md / AGENTS.md / …）加一行引用
+4. 開新代理 session 測試
+
+**就這樣。** 其他全部之後再說——**感到某個檔案缺席**才加。
+
+→ [`docs/getting-started.zh.md`](docs/getting-started.zh.md) / English: [`docs/getting-started.md`](docs/getting-started.md)
+
+**規則：某個檔案的缺席沒在傷你，就讓它空著。**
+
+---
+
 ## 這是什麼
 
 Project Doctrine 是一種方法：把專案付過代價的經驗，轉成可重用的**姿態載入器（posture loader）**給 AI 代理。

@@ -22,6 +22,23 @@ That difference matters.
 
 ---
 
+## Start here (30 minutes)
+
+The repo is large, but the **first run is small**:
+
+1. Copy the template into your project
+2. Fill **4 files** (state-snapshot, L1-ideology, failure-memory, bootstrap-prompt)
+3. Add one reference line to your runtime config (CLAUDE.md / AGENTS.md / ...)
+4. Test with a fresh agent session
+
+That's it. Everything else is opt-in later — add files only when you feel their absence.
+
+→ [`docs/getting-started.md`](docs/getting-started.md) / 中文：[`docs/getting-started.zh.md`](docs/getting-started.zh.md)
+
+**Rule:** if a file's absence isn't actively hurting you, leave it empty.
+
+---
+
 ## What This Is
 
 Project Doctrine is a method for turning a project's hard-won experience into a reusable posture loader for AI agents.
