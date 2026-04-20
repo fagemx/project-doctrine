@@ -289,22 +289,13 @@ Full guide (lifecycle, triage template, review cadence, anti-patterns): [`docs/m
 
 ## Usage Modes
 
-Project Doctrine is used differently by solo builders and teams. The six-layer structure is the same; the governance around it is not.
+Project Doctrine supports three modes. The six-layer structure is the same; what changes is *where the judgment comes from*.
 
 ### Solo Mode
 
 > A doctrine is a memory prosthetic for your future self and your agents.
 
-Use Solo Mode when:
-
-- you are the main builder
-- you work with AI agents across long sessions
-- you return to projects after long gaps and keep losing context
-- multiple agents keep making the same wrong assumptions
-- your project has taste or philosophy that normal docs do not capture
-- you want future agents to inherit your judgment
-
-In Solo Mode, the doctrine can be more personal and opinionated. Short updates. No PRs. You are allowed to write "I keep being tempted to turn this into a productivity bot. Do not let that happen."
+Building doctrine inside your own project, as you go. Low ceremony. Personal voice OK. Updates without PRs.
 
 Full guide: [`docs/solo-mode.md`](docs/solo-mode.md).
 
@@ -312,36 +303,35 @@ Full guide: [`docs/solo-mode.md`](docs/solo-mode.md).
 
 > A doctrine is a shared judgment contract for humans and agents.
 
-Use Team Mode when:
-
-- multiple humans or agents contribute
-- onboarding requires more than reading the README
-- product judgment lives in a few people's heads
-- reviewers keep explaining the same taste or trust-boundary concerns
-- the team repeats the same architectural mistake more than once
-
-In Team Mode, doctrine is a **shared judgment contract**. Changes go through PRs, reviewed like architecture. Ownership is explicit. Failure memory is de-personalized (no blame, no names). Two extra files live alongside the layers: `governance.md` and `decision-records.md`.
+Multiple humans and agents sharing a project. Governance required. Failure memory de-personalized. Two extra files: `governance.md` and `decision-records.md`.
 
 Full guide: [`docs/team-mode.md`](docs/team-mode.md).
 
+### Archaeology Mode
+
+> **Analyze decisions, not personalities.
+> Infer norms, not motives.**
+
+Entering a project that already exists — open-source, legacy, inherited, new employer — and inferring its doctrine from public artifacts (PRs, issues, reviews, release notes).
+
+Produces contribution hypotheses, not official rules. Every inferred entry carries confidence + evidence. The goal is reducing review-cycle waste, not gaming maintainers.
+
+Full guide: [`docs/archaeology-mode.md`](docs/archaeology-mode.md) / 中文：[`docs/archaeology-mode.zh.md`](docs/archaeology-mode.zh.md).
+
 ### Which mode should I use?
 
-Use **Solo Mode** if:
-- You are the primary (or only) builder
-- You work with agents, not coworkers, on this project
-- You want low ceremony: quick updates, subjective voice, no review gate
+Use **Solo Mode** if you're the primary builder of your own project and work mostly with agents.
 
-Use **Team Mode** if:
-- Multiple humans or AI agents contribute to the same repo
-- Onboarding needs to transfer project-native judgment, not just code access
-- You've noticed your team re-paying for lessons one member already learned
+Use **Team Mode** if multiple humans + agents contribute to the same codebase and judgment needs to be reviewable.
 
-Use **neither** if:
+Use **Archaeology Mode** if you're entering a project from outside and need to understand its public decision patterns before opening PRs.
+
+Use **none** if:
 - The project is small and a README is enough
 - No real failures or taste decisions have happened yet
 - The project is a one-off deliverable with no future audience
 
-**Doctrine is useful after a project has scars.**
+**Doctrine is useful after a project has scars — yours, your team's, or the project's you're joining.**
 
 ## When Should You Create One?
 
@@ -391,11 +381,16 @@ See [`examples/`](examples/):
 **Team Mode:**
 > A doctrine is a shared judgment contract for humans and agents.
 
+**Archaeology Mode:**
+> Analyze decisions, not personalities. Infer norms, not motives.
+
 中文：
 
 > 個人模式：Doctrine 是未來的你和你的代理，用來接住現在判斷力的外接記憶。
 >
 > 團隊模式：Doctrine 是人類與代理共同使用的判斷契約。
+>
+> 考古模式：分析決策，不分析人格；推論規範，不揣測動機。
 >
 > **AI 代理越來越會做事，但它們還是不知道一個專案為什麼這樣判斷。
 > Handoff 保存工作連續性。

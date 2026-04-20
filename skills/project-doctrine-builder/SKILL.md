@@ -26,16 +26,19 @@ Do NOT use this skill for:
 - One-off tasks (doctrine has no future audience)
 - Projects where a README or CLAUDE.md is sufficient
 
-## First ask: Solo or Team mode?
+## First ask: which of three modes?
 
 Before building anything, clarify:
 
 - **Solo Mode** — one primary builder + one or more AI agents. Low ceremony. Personal voice OK. Updates without PRs.
 - **Team Mode** — multiple human contributors (plus agents). Governance required. Failure memory de-personalized. Two extra files: `governance.md` and `decision-records.md`.
+- **Archaeology Mode** — *entering* an existing project (open-source, legacy, inherited). Inferring doctrine from public PRs, issues, reviews. **Ethically bounded: analyze decisions, not personalities.** Different output set: archaeology-report, contribution-strategy, review-risk-map.
 
-The structure is the same; the discipline is different. See `docs/solo-mode.md` and `docs/team-mode.md` in the project-doctrine repo for detail.
+The six-layer structure is shared across all three; what differs is origin (do I build it or infer it?), ceremony (solo vs team), and ethical boundary (archaeology's public-decisions-only rule).
 
-If unclear, ask: "Will more than one human contribute to this doctrine, or is it just you + agents?"
+See `docs/solo-mode.md` / `docs/team-mode.md` / `docs/archaeology-mode.md` in the project-doctrine repo for detail.
+
+If unclear, ask: "Are you building doctrine for a project you're inside (solo / team), or inferring doctrine for a project you're entering (archaeology)?"
 
 ## What you produce
 
