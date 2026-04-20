@@ -15,6 +15,7 @@ on-demand:
   - references/apprenticeship-check.md
   - references/bootstrap-prompt.md
   - references/provenance.md
+  - references/incubation.md
 team-only:
   - references/governance.md
   - references/decision-records.md
@@ -55,6 +56,7 @@ Then, on demand as the work requires:
 - [`references/apprenticeship-check.md`](references/apprenticeship-check.md) — the 6 questions a new agent should answer
 - [`references/bootstrap-prompt.md`](references/bootstrap-prompt.md) — copy-paste agent loader
 - [`references/provenance.md`](references/provenance.md) — where the entries came from
+- [`references/incubation.md`](references/incubation.md) — candidate doctrine not yet promoted (the "not sure yet" parking lot)
 
 **Team mode only** (solo projects can delete these):
 

@@ -263,6 +263,28 @@ Skip it for typos, formatting fixes, and trivial lookups.
 
 Full guide: [`docs/everyday-use.md`](docs/everyday-use.md) / 中文：[`docs/everyday-use.zh.md`](docs/everyday-use.zh.md)
 
+## Maintenance
+
+Do not put everything into doctrine.
+
+> **Git stores history.
+> Doctrine stores usable judgment.**
+
+When something important happens, triage it into one of four fates:
+
+- **Keep** — still fires, leave in place
+- **Promote** — handoff observation → durable rule (failure-memory, taste, L6)
+- **Archive** — historical, mark as such ("Do not use as current doctrine")
+- **Delete** — duplicated / misleading / no judgment value (git keeps it if needed)
+
+If unsure, park it in `references/incubation.md` and revisit next review.
+
+Guiding principle:
+
+> **Doctrine should get smaller and sharper over time, not bigger and heavier.**
+
+Full guide (lifecycle, triage template, review cadence, anti-patterns): [`docs/maintenance.md`](docs/maintenance.md) / 中文：[`docs/maintenance.zh.md`](docs/maintenance.zh.md)
+
 ---
 
 ## Usage Modes
