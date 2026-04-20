@@ -278,6 +278,25 @@ Skip it for typos, formatting fixes, and trivial lookups.
 
 Full guide: [`docs/everyday-use.md`](docs/everyday-use.md) / 中文：[`docs/everyday-use.zh.md`](docs/everyday-use.zh.md)
 
+## Progress records are flexible
+
+Different records serve different time scales — and no project needs all of them.
+
+| Record | Time scale | Purpose |
+|---|---|---|
+| State snapshot | now | what is true today |
+| Handoff | next session | how to continue a task |
+| Narrative log | one arc | how a judgment formed |
+| Decision record | durable decision | what was decided and why |
+| Provenance | doctrine lifetime | where doctrine entries came from |
+
+**Project Doctrine prescribes the promotion path, not the format:**
+`raw progress → narrative → decision → doctrine`
+
+Use the smallest record that preserves the needed judgment. Don't turn every update into doctrine.
+
+Full guide (which records for which mode, decision flow, anti-patterns): [`docs/progress-records.md`](docs/progress-records.md) / 中文：[`docs/progress-records.zh.md`](docs/progress-records.zh.md)
+
 ## Maintenance
 
 Do not put everything into doctrine.

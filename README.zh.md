@@ -282,6 +282,25 @@ Assistant 說「我可以幫你封存」但沒有對應的 state 轉換發生。
 
 ---
 
+## 進度紀錄是彈性的
+
+不同紀錄服務不同時間尺度——而且沒有一個專案需要全部都用。
+
+| 紀錄 | 時間尺度 | 用途 |
+|---|---|---|
+| State snapshot | 現在 | 今天是什麼狀態 |
+| Handoff | 下一個 session | 怎麼接續工作 |
+| Narrative log | 一段弧線 | 判斷怎麼形成 |
+| Decision record | 已決事項 | 決了什麼、為什麼 |
+| Provenance | doctrine 生命週期 | doctrine 條目從哪來 |
+
+**Project Doctrine 規定的是 promotion path，不是格式：**
+`原始進度 → 敘事 → 決策 → doctrine`
+
+**用能保存判斷的最小紀錄形式。** 不要把每個更新都變 doctrine。
+
+完整指南（各模式用哪些紀錄、決策流、反模式）：[`docs/progress-records.zh.md`](docs/progress-records.zh.md)
+
 ## 維護
 
 **不要**什麼東西都塞進 doctrine。
