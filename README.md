@@ -235,7 +235,7 @@ See [`docs/apprenticeship-protocol.md`](docs/apprenticeship-protocol.md).
 
 ## Quick Start
 
-1. Copy `templates/project-doctrine-skill/` into your project.
+1. Copy `templates/project-doctrine-skill/` into your project (see paths per runtime below).
 2. Fill in `state-snapshot.md`.
 3. Write L1, L5, and L6 first.
 4. Add at least 3 failure memory entries.
@@ -243,7 +243,20 @@ See [`docs/apprenticeship-protocol.md`](docs/apprenticeship-protocol.md).
 6. Write an apprenticeship check.
 7. Use the doctrine before planning new work.
 
-See [`docs/migration-guide.md`](docs/migration-guide.md) for a step-by-step.
+### Installation paths
+
+No CLI, no package manager — just `git clone` and `cp -r`. The directory you copy to depends on your agent runtime:
+
+| Runtime | Path |
+|---|---|
+| Claude Code (project) | `.claude/skills/<project>-doctrine/` |
+| Codex / Gemini / agent-neutral | `docs/skills/<project>-doctrine/` + reference from `AGENTS.md` / `GEMINI.md` |
+| Cursor | `docs/skills/<project>-doctrine/` + pointer from `.cursor/rules/` |
+| No specific runtime | `docs/skills/<project>-doctrine/` — any agent can read it |
+
+Full install guide (all runtimes, builder skill, archaeology templates, updates, uninstall): [`docs/install.md`](docs/install.md) / 中文：[`docs/install.zh.md`](docs/install.zh.md)
+
+Step-by-step for filling the template: [`docs/migration-guide.md`](docs/migration-guide.md)
 
 ## Everyday Use
 
