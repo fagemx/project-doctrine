@@ -6,6 +6,8 @@
 > _Handoff tells an agent what happened.
 > Doctrine teaches an agent how to judge._
 
+> 中文版 README：[`README.zh.md`](README.zh.md)
+
 Most AI agent handoffs tell the next agent *what happened*. Project Doctrine teaches the next agent *how to judge*.
 
 A handoff says:
