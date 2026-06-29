@@ -19,7 +19,7 @@ execution-control = 目前大戰役是什麼、下一個可做什麼、什麼時
 1. 複製模板：
 
 ```powershell
-Copy-Item "C:\ai_project\project-doctrine\templates\execution-state.md" `
+Copy-Item "<project-doctrine-路徑>\templates\execution-state.md" `
   "docs\product\<project>-execution-state.md"
 ```
 
@@ -71,7 +71,7 @@ templates/project-doctrine-skill/references/execution-state.md
 
 ## 三個組件
 
-Execution control 整合三個組件。Kalam、goal-loop-dispatcher、Prismstack 是有用的參考實作，但下面的方法由 Project Doctrine 自己承擔。
+Execution control 是 Project Doctrine 自己的方法，由三個組件構成。
 
 ### 1. Loop control
 

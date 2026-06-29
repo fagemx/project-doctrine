@@ -22,7 +22,7 @@ the agent from making the user track every small commit.
 1. Copy the template:
 
 ```powershell
-Copy-Item "C:\ai_project\project-doctrine\templates\execution-state.md" `
+Copy-Item "<path-to-project-doctrine>\templates\execution-state.md" `
   "docs\product\<project>-execution-state.md"
 ```
 
@@ -76,9 +76,7 @@ are enough.
 
 ## The three parts
 
-Execution control combines three parts. Kalam, goal-loop-dispatcher, and
-Prismstack are useful reference implementations, but Project Doctrine owns the
-method below.
+Execution control is a Project Doctrine method with three parts.
 
 ### 1. Loop control
 
