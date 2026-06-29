@@ -347,6 +347,8 @@ Assistant 說「我可以幫你封存」但沒有對應的 state 轉換發生。
 
 完整指南（各模式用哪些紀錄、決策流、反模式）：[`docs/progress-records.zh.md`](docs/progress-records.zh.md)
 
+長任務一直用小 package 推進、使用者看不出大方向時，加 execution control。看 [`docs/execution-control.zh.md`](docs/execution-control.zh.md) / English: [`docs/execution-control.md`](docs/execution-control.md)。
+
 ## 維護
 
 **不要**什麼東西都塞進 doctrine。

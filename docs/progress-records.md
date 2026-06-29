@@ -18,9 +18,14 @@ No. You need the smallest set of records that preserves the judgment you want to
 
 ---
 
-## The five record types
+## The core record types
 
 They're listed in increasing time scale.
+
+For long-running campaigns, a sixth optional control file may be useful:
+`execution-state.md`. It sits beside state snapshot and handoff, but answers a
+different question: which large campaign is active, what is the next eligible
+unit, and what stop conditions apply. See [`execution-control.md`](execution-control.md).
 
 ### 1. State snapshot — "right now"
 
@@ -133,6 +138,7 @@ Provenance is how future agents can tell the difference between **"we paid for t
 |---|---|---|
 | **State snapshot** | now | what is true today |
 | **Handoff** | next session | how to continue a specific task |
+| **Execution state** | campaign | active campaign, next eligible unit, stop conditions |
 | **Narrative log** | one arc (session / week) | how a judgment formed |
 | **Decision record** | durable decision | what was decided, what was rejected |
 | **Provenance** | doctrine lifetime | where doctrine entries came from |

@@ -343,6 +343,9 @@ Use the smallest record that preserves the needed judgment. Don't turn every upd
 
 Full guide (which records for which mode, decision flow, anti-patterns): [`docs/progress-records.md`](docs/progress-records.md) / 中文：[`docs/progress-records.zh.md`](docs/progress-records.zh.md)
 
+For long-running campaigns where small packages make the big picture hard to
+track, add execution control. See [`docs/execution-control.md`](docs/execution-control.md) / 中文：[`docs/execution-control.zh.md`](docs/execution-control.zh.md).
+
 ## Maintenance
 
 Do not put everything into doctrine.

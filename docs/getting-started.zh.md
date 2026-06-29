@@ -209,6 +209,7 @@ Day 1 **不要**建立下面這些檔案，除非對應條件成立：
 - `layer-3-methods.md` — 當你有一個方法跨 ≥ 2 個情境驗證過。
 - `layer-4-sops.md` — 當某個具體流程第 3 次重複。
 - `handoff.md` — 當 session 之間的連續性開始混亂。
+- `execution-state.md` — 當長任務有很多小 package，使用者已經無法只靠 state-snapshot 看出大方向。
 - `narrative-log/` — 當你的長 session 裡有值得保存的轉化。
 - `incubation.md` — 當你一直有「可能是 doctrine、不確定」的時刻。
 

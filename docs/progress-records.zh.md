@@ -18,9 +18,12 @@
 
 ---
 
-## 五種紀錄類型
+## 核心紀錄類型
 
 從短到長排。
+
+長任務專案可以選配第六種控制檔：`execution-state.md`。它放在 state
+snapshot 和 handoff 旁邊，但回答的是另一個問題：目前大戰役是什麼、下一個可做單元是什麼、哪些停機條件有效。看 [`execution-control.zh.md`](execution-control.zh.md)。
 
 ### 1. State snapshot — 「現在」
 
@@ -131,6 +134,7 @@ Provenance 讓未來的代理能分辨**「我們付過代價」**和**「某人
 |---|---|---|
 | **State snapshot** | 現在 | 今天是什麼狀態 |
 | **Handoff** | 下一個 session | 怎麼接續某個具體工作 |
+| **Execution state** | 大戰役 | 目前戰役、下一個可做單元、停機條件 |
 | **Narrative log** | 一段弧線（session / 週） | 判斷怎麼形成 |
 | **Decision record** | 已決事項 | 決了什麼、拒絕了什麼 |
 | **Provenance** | doctrine 生命週期 | doctrine 條目從哪來 |
