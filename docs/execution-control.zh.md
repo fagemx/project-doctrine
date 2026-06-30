@@ -236,3 +236,12 @@ templates/execution-state.md
 ```
 
 只有在普通 state snapshot 已經不夠用時才填。
+
+---
+
+## 下一層（選用）
+
+如果 markdown 執行狀態本身擠不下一個螢幕、或第二個讀者（status 命令、外部 agent、姊妹 session）需要同一份狀態，就加**機器可讀的控制平面（control plane）**。
+看 [`control-plane.zh.md`](control-plane.zh.md)，template 在 [`../templates/control-plane.json`](../templates/control-plane.json)。
+
+控制平面是 opt-in。Markdown 執行狀態仍是敘事來源；JSON 是它的結構化對應。

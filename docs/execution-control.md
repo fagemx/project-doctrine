@@ -246,3 +246,16 @@ templates/execution-state.md
 ```
 
 Fill it only after normal state snapshots are no longer enough.
+
+---
+
+## Next layer (optional)
+
+If the markdown execution state itself outgrows one screen, or a second
+reader (a status command, an external agent, a sibling session) needs the
+same state, add a **machine-readable control plane**. See
+[`control-plane.md`](control-plane.md) and the template at
+[`../templates/control-plane.json`](../templates/control-plane.json).
+
+The control plane is opt-in. The markdown execution state remains the
+narrative source; the JSON is the structured mirror.

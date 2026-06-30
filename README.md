@@ -346,6 +346,18 @@ Full guide (which records for which mode, decision flow, anti-patterns): [`docs/
 For long-running campaigns where small packages make the big picture hard to
 track, add execution control. See [`docs/execution-control.md`](docs/execution-control.md) / 中文：[`docs/execution-control.zh.md`](docs/execution-control.zh.md).
 
+If the markdown execution state outgrows itself — a second reader needs the
+same state, the file no longer fits one screen, or external agents need a
+structured status — add a **machine-readable control plane**. It is one
+JSON file plus a thin status command, and it is optional.
+
+See [`docs/control-plane.md`](docs/control-plane.md) / 中文：[`docs/control-plane.zh.md`](docs/control-plane.zh.md), with templates in
+[`templates/control-plane.json`](templates/control-plane.json) and [`templates/status-command.md`](templates/status-command.md).
+
+For projects that eventually run more than one active track at once, the
+control plane has an opt-in **lane parallelism** extension. See
+[`docs/lane-parallelism.md`](docs/lane-parallelism.md) / 中文：[`docs/lane-parallelism.zh.md`](docs/lane-parallelism.zh.md).
+
 ## Maintenance
 
 Do not put everything into doctrine.
