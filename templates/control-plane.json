@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "project-doctrine.control-plane.v1",
+  "updatedAt": "YYYY-MM-DD",
+  "currentFocus": "<one-line description of the current focus>",
+  "lastCompletedPackage": {
+    "id": "<package-id>",
+    "name": "<short human name>",
+    "commit": "<git short sha or 'uncommitted'>",
+    "summary": "<one to two sentences about what shipped>"
+  },
+  "latestProof": {
+    "id": "<package-id>",
+    "name": "<short human name>",
+    "commit": "<git short sha>",
+    "summary": "<one to two sentences about the deepest end-to-end proof>"
+  },
+  "nextQueue": [
+    {
+      "order": 1,
+      "id": "<package-id>",
+      "status": "next",
+      "goal": "<one-line goal>",
+      "doneWhen": "<concrete completion test>"
+    },
+    {
+      "order": 2,
+      "id": "<package-id>",
+      "status": "queued",
+      "goal": "<one-line goal>",
+      "doneWhen": "<concrete completion test>"
+    },
+    {
+      "order": 3,
+      "id": "<package-id>",
+      "status": "conditional",
+      "goal": "<one-line goal, only fires if the previous package surfaces a real gap>",
+      "doneWhen": "<concrete completion test>"
+    }
+  ],
+  "stopConditions": [
+    "<a class of action that requires explicit operator approval, e.g. 'adding durable storage'>",
+    "<another class, e.g. 'introducing a new dependency'>",
+    "<another class, e.g. 'promoting any convention or pattern as canonical'>"
+  ],
+  "friction": [
+    {
+      "date": "YYYY-MM-DD",
+      "issue": "<what made progress hard>",
+      "handling": "<how the project responded>"
+    }
+  ],
+  "verificationBaseline": {
+    "commands": [
+      "<command that proves the project still runs>",
+      "<command that proves typecheck/lint passes>",
+      "<command that proves tests pass>"
+    ],
+    "expectedTests": "<test file count, test count, or other baseline>"
+  },
+  "doctrine": {
+    "stateSnapshot": "<path to state-snapshot.md>",
+    "ideology": "<path to layer-1-ideology.md>",
+    "failureMemory": "<path to failure-memory.md>",
+    "bootstrapPrompt": "<path to bootstrap-prompt.md>"
+  },
+  "governanceRule": "Future work must update this file after each package. Future agents must load the doctrine MVD. The operator should not need chat history to know current focus, next queue, or stop conditions."
+}
